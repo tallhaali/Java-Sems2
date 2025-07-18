@@ -1,0 +1,44 @@
+public class Fraction {
+
+    // static String multiplyFractions(int numerator1, int denominator1, int numerator2, int denominator2) {
+    //     // Calculate the product of the numerators and denominators
+    //     int numeratorProduct = numerator1 * numerator2;
+    //     int denominatorProduct = denominator1 * denominator2;
+
+    //     // Return the result as a string in the format "numerator/denominator"
+    //     return numeratorProduct + "/" + denominatorProduct;
+    // }
+
+    public static class Frac{
+        int numerator;
+        int denominator;
+
+        // Constructor
+        public Frac(int numerator, int denominator) {
+            this.numerator = numerator;
+            this.denominator = denominator;
+        }
+
+        @Override
+        public String toString() {
+            return numerator + "/" + denominator;
+        }
+
+    }
+    
+    // Multiply two fractions
+    public static Frac multiplyFractions(Frac fraction1, Frac fraction2) {
+        int numeratorProduct = fraction1.numerator * fraction2.numerator;
+        int denominatorProduct = fraction1.denominator * fraction2.denominator;
+        return new Frac(numeratorProduct, denominatorProduct);
+    }
+
+    public static void main(String[] args) {
+       
+        Frac fraction1 = new Frac(3, 2);
+        Frac fraction2 = new Frac(3, 4);
+        // String result = multiplyFractions(1, 2, 3, 4);
+        System.out.println("The product of the fractions is: " + multiplyFractions(fraction1, fraction2)); // Output: The product of the fractions is: 3/8
+    }
+
+}
