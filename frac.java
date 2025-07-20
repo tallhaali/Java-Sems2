@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 //Class
 public class  frac{
@@ -16,6 +17,15 @@ public class  frac{
         int deno= den1*den2;
         return (numer+"/"+deno);
     }
+    //Additon method
+    public String add(){
+        int adnum1=num1*den2;
+        int adnum2=num2*den1;
+        int finalnum= adnum1 + adnum2;
+        int finalden=den1*den2;
+        return finalnum +"/"+ finalden;
+
+    }
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         //Taking input from user, instead of hardcoded values.
@@ -27,12 +37,27 @@ public class  frac{
         int num2=input.nextInt();
         System.out.println("Please enter the Second Denominator: ");
         int den2=input.nextInt();
-
-        //Object creation for fractions
+        input.nextLine();
+        System.out.println("What would you like to do? Add or multiply?");
+        String choice=input.nextLine();
+        input.close();
+        String result;
         frac Fraction=new frac(num1,num2,den1,den2);
-        String result=Fraction.multiply();
-        System.out.println("The answer is: "+result);
         
+        switch(choice.toLowerCase()){
+        case "add":
+        result =Fraction.add();
+        break;
+        case "multiply":
+        result=Fraction.multiply();
+        break;
+        default:
+          result= "invalid Choice";
+}
+        //Object creation for fractions
+        
+                System.out.println("The answer is: "+result);
+
     }
 
 }
