@@ -1,0 +1,77 @@
+## 🖥️ SystemInfo (OOP Version)
+
+A Java-based command-line utility that fetches detailed system information like CPU, GPU, RAM, Motherboard, OS, Boot Time, and more — now refactored using **Object-Oriented Programming** principles.
+
+### 📌 Features
+
+* ✅ Modular class-based design using interfaces and polymorphism
+* ✅ Reusable utility methods for I/O parsing
+* ✅ Support for individual or full system reports
+* ✅ Extensible structure for adding more components
+
+### 🧠 OOP Concepts Used
+
+| Concept           | Description                                                                    |
+| ----------------- | ------------------------------------------------------------------------------ |
+| **Abstraction**   | Defined a `SystemComponent` interface with a common `displayInfo()` method.    |
+| **Polymorphism**  | Dynamically called the appropriate `displayInfo()` method based on user input. |
+| **Encapsulation** | Utility methods and logic are neatly organized into separate classes.          |
+| **Inheritance**   | All component classes implement the `SystemComponent` interface.               |
+
+### 🔧 Components Included
+
+* CPU Info
+* GPU Info
+* RAM Info
+* Motherboard Info
+* OS Info
+* Java Runtime Info
+* System Boot Time
+* Combined Report ("All")
+
+---
+
+### 🚀 How to Run
+
+1. Clone the repo:
+   
+   git clone https://github.com/your-username/SystemInfo-OOP.git
+   cd SystemInfo-OOP
+
+2. Compile the files:
+   
+   bash
+   javac *.java
+
+3. Run the main program:
+
+   bash
+   java SystemInfo
+
+### 🗂️ Project Structure
+
+SystemInfo-OOP/
+│
+├── SystemInfo.java          # Main class with menu
+├── SystemComponent.java     # Interface
+├── CPU.java                 # CPU implementation
+├── GPU.java                 # GPU implementation
+├── RAM.java                 # RAM implementation
+├── Motherboard.java         # Motherboard implementation
+├── OsInfo.java              # OS Info implementation
+├── JavInfo.java             # Java Info implementation
+├── Boot.java                # Boot Time implementation
+├── All.java                 # Combines all components
+├── SysUtil.java             # Utility class for shared methods
+└── README.md
+
+### 🧩 Requirements
+
+* Java 8 or later
+* Windows OS (uses `wmic` commands)
+
+> *Note: `wmic` is deprecated on some modern Windows systems. You may need PowerShell equivalents in future updates.*
+
+### 📣 Contributions
+
+Feel free to fork this repo, improve the design, or add support for Linux/Mac systems. PRs are welcome!
