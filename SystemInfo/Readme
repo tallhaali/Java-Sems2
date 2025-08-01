@@ -35,8 +35,8 @@ A Java-based command-line utility that fetches detailed system information like 
 
 1. Clone the repo:
    
-   git clone https://github.com/your-username/SystemInfo-OOP.git
-   cd SystemInfo-OOP
+   git clone https://github.com/your-username/SystemInfo.git
+   cd SystemInfo
 
 2. Compile the files:
    
