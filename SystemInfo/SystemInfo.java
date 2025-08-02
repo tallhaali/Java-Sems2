@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class SystemInfo {
 public static void main(String[] args) throws Exception {
-String[] options = {"CPU","GPU","RAM","Motherboard","OS Info","Java Info","Boot Time","All","Exit"};
+String[] options = {"CPU","GPU","RAM","Motherboard","OS Info","Java Info","Boot Time","HDD","All","Exit"};
 Scanner inputusr = new Scanner(System.in);
 while (true) {
 System.out.println("Available components are:");
@@ -41,12 +41,17 @@ switch(choice){
     component = new Boot();
     break;
     case "8":
+    case "HDD":
+    component =new DiskDrive();
+    break;
+    case "9":
     case "All":
     component = new All();
     break;
-    case "9":
+    case "10":
     case "Exit":
     System.out.println("Exiting the program...");
+    inputusr.close();
     System.exit(0);
     break;
     default:
@@ -58,5 +63,8 @@ if(component!=null){
     System.out.println();
 }
 }
+
+
     }
+    
 }
