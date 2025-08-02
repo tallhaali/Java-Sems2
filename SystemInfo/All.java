@@ -4,6 +4,7 @@ public class All implements SystemComponent {
         new CPU().displayInfo();
         new GPU().displayInfo();
         new RAM().displayInfo();
+        new DiskDrive().displayInfo();
         new OsInfo().displayInfo();
         new Boot().displayInfo();
         new JavInfo().displayInfo();
