@@ -24,6 +24,7 @@ A Java-based command-line utility that fetches detailed system information like 
 * GPU Info
 * RAM Info
 * Motherboard Info
+* Disk Drive Info
 * OS Info
 * Java Runtime Info
 * System Boot Time
@@ -61,6 +62,7 @@ SystemInfo-OOP/
 ├── OsInfo.java              # OS Info implementation
 ├── JavInfo.java             # Java Info implementation
 ├── Boot.java                # Boot Time implementation
+├── DiskDrive.java           # Disk Drive implementation
 ├── All.java                 # Combines all components
 ├── SysUtil.java             # Utility class for shared methods
 └── README.md
